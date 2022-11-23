@@ -1,3 +1,16 @@
+# my readme
+
+Yep. Here I am.
+
+
+# lesson one
+Running the spiders from the command line (can't just run as a  py file)
+
+And get JSON output!
+``` scrapy runspider ietf.py -o ietf.json```
+
+# original readme below
+
 # Web Scraping with Python
 This is the repository for the LinkedIn Learning course Web Scraping with Python. The full course is available from [LinkedIn Learning][lil-course-url].
 
