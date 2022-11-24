@@ -12,6 +12,10 @@ class IetfSpider(scrapy.Spider):
     def parse(self, response):
         return {'title': response.xpath('//span[@class="title"]/text()').get()}
 
+    def parse2(self, response):
+        #
+        return {'title': response.css('span.title::text').get()}
+
 
 # to run this bad boy
 # scrapy runspider ietf.py -o ietf.json

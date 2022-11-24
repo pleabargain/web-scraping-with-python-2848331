@@ -8,7 +8,20 @@ class IetfSpider(scrapy.Spider):
     start_urls = ['http://pythonscraping.com/linkedin/ietf.html']
 
     def parse(self, response):
+
+        # /html/body/div/pre/span[1]
+        # /html/body/div/pre/span[1]
+        # title
+        # /html/body/div/pre/span[5]
+        #/html/body/div/pre/span[5]
+        #/html/body/div/pre/span[5]
+        #/html[1]/body[1]/div[1]/pre[1]/span[4]
+        # email: /html[1]/body[1]/div[1]/pre[1]/span[8]
+        # email /html/body/div/pre/span[8]
         return {
+            'email': response.xpath('/html[1]/body[1]/div[1]/pre[1]/span[8]').get(),
+            'emailagain from chrome:': response.xpath('/html/body/div/pre/span[8]').get(),
+            'titleforme': response.xpath('/html[1]/body[1]/div[1]/pre[1]/span[4]/text()').get(),
             'number': response.xpath('//span[@class="rfc-no"]/text()').get(),
             'title': response.xpath('//meta[@name="DC.Title"]/@content').get(),
             # 'title': response.xpath('//span[@class="title"]/text()').get(),

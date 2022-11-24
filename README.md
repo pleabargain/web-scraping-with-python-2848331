@@ -2,9 +2,13 @@
 
 Yep. Here I am.
 
+# my forked repo
+https://github.com/pleabargain/web-scraping-with-python-2848331
 
 # lesson one
 Running the spiders from the command line (can't just run as a  py file)
+
+VS code, right click on the file to run and "Open in Integrated Term"
 
 And get JSON output!
 ``` scrapy runspider ietf.py -o ietf.json```
