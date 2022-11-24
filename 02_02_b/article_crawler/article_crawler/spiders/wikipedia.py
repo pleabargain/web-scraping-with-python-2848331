@@ -1,7 +1,14 @@
 # -*- coding: utf-8 -*-
+
+# to run this script
+# the -s option is to set the settings.py file
+# scrapy runspider wikipedia.py -o articles.csv -t csv -s CLOSESPIDER_PAGECOUNT=10
+
 import scrapy
 from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
+
+# import the Article class from items.py
 from article_crawler.items import Article
 
 class WikipediaSpider(CrawlSpider):
@@ -18,5 +25,6 @@ class WikipediaSpider(CrawlSpider):
         
         article[ "title"]= response.xpath('//h1/text()').get() or response.xpath('//h1/i/text()'),
         article[ "url"]= response.url
-        article["last_edited"]= response.xpath('//li[@id="footer-info-lastmod"]/text()').get()
+        article["lastUpdated"]= response.xpath('//li[@id="footer-info-lastmod"]/text()').get()
+        return article
         

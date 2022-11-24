@@ -10,9 +10,11 @@
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
 BOT_NAME = 'article_crawler'
-
+CLOSESPIDER_PAGECOUNT=10
 SPIDER_MODULES = ['article_crawler.spiders']
 NEWSPIDER_MODULE = 'article_crawler.spiders'
+FEED_URI = "articles.json"
+FEED_FORMAT = "json"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent

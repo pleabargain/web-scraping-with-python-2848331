@@ -1,6 +1,6 @@
 # my readme
 
-Yep. Here I am.
+I forked this repo to follow along.
 
 # my forked repo
 https://github.com/pleabargain/web-scraping-with-python-2848331

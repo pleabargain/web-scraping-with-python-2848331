@@ -1,4 +1,9 @@
 # -*- coding: utf-8 -*-
+
+# to run this script
+# scrapy runspider wikipedia.py
+
+
 import scrapy
 from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
