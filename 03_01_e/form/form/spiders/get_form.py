@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+
+# to run this
+# scrapy runspider .\get_form.py
 import scrapy
 
 def generate_start_urls():

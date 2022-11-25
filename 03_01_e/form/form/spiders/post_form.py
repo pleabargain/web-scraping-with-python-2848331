@@ -9,6 +9,7 @@ class GetFormSpider(scrapy.Spider):
     def start_requests(self):
         names = ['Alice', 'Bob', 'Charles']
         quests = ['to seek the grail', 'to learn Python', 'to scrape the web']
+        # takes a URL and form data and returns a FormRequest object
         return [FormRequest(
             'http://pythonscraping.com/linkedin/formAction2.php',
             formdata={'name': name, 'quest': quest, 'color': 'blue'},
